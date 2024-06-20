@@ -41,6 +41,12 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "Asparagus Fern",
+      "image": "https://www.mydomaine.com/thmb/7XMs92RclNe41X15koE_oYd3bFU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/117483177_332765124766712_8112992605398234815_n-bfcf5770139649c08374d57850cc6ff5.jpg",
+      "price": "59.76",
+      "id": 8
     }
   ]
 }

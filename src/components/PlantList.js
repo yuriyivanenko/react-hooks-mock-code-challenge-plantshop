@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PlantCard from './PlantCard'
 
-function PlantList() {
+function PlantList({ submitTrigger }) {
   const [plantList, setPlantList] = useState(null)
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function PlantList() {
       }
     }
     fetchData()
-  }, [])
+  }, [submitTrigger])
 
   if (!plantList) return <h2>Loading...</h2>
 
