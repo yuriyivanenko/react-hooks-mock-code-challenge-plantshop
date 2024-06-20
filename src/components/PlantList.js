@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PlantCard from './PlantCard'
 
-function PlantList({ submitTrigger, searchName }) {
+function PlantList({ reFetchTrigger, handleSubmitTrigger, searchName }) {
   const [plantList, setPlantList] = useState(null)
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function PlantList({ submitTrigger, searchName }) {
       }
     }
     fetchData()
-  }, [submitTrigger])
+  }, [reFetchTrigger])
 
   if (!plantList) return <h2>Loading...</h2>
 
@@ -27,7 +27,7 @@ function PlantList({ submitTrigger, searchName }) {
   return (
     <ul className='cards'>
       {searchedList.map((plant) => {
-        return <PlantCard key={`plant-${plant.name}`} plantInfo={plant} />
+        return <PlantCard key={`plant-${plant.name}`} handleSubmitTrigger={handleSubmitTrigger} plantInfo={plant} />
       })}
     </ul>
   )

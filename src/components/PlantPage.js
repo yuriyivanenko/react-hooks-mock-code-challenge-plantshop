@@ -4,15 +4,15 @@ import PlantList from './PlantList'
 import Search from './Search'
 
 function PlantPage() {
-  const [submitTrigger, setSubmitTrigger] = useState(false)
+  const [reFetchTrigger, setReFetchTrigger] = useState(false)
   const [searchName, setSearchName] = useState('')
-  const handleSubmitTrigger = () => setSubmitTrigger(!submitTrigger)
+  const handleSubmitTrigger = () => setReFetchTrigger(!reFetchTrigger)
 
   return (
     <main>
       <NewPlantForm handleSubmitTrigger={handleSubmitTrigger} />
       <Search setSearchName={setSearchName} />
-      <PlantList submitTrigger={submitTrigger} searchName={searchName} />
+      <PlantList handleSubmitTrigger={handleSubmitTrigger} reFetchTrigger={reFetchTrigger} searchName={searchName} />
     </main>
   )
 }
